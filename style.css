@@ -6,9 +6,20 @@ html, body {
     font-size: 12px;
 }
 
+h4 {
+    font-size: 1.25rem;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
 .container {
+    height: 100%;
     display: grid;
-    grid-template-rows: 150px 1fr;
+    grid-template-rows: 130px 1fr;
     grid-template-columns: 250px 1fr;
 }
 
@@ -59,4 +70,147 @@ html, body {
 
 .profile-links img, .settings-links img {
     height: 25px;
+}
+
+.header {
+    background-color: white;
+    box-shadow: 0 6px 8px -8px rgb(73, 73, 73);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    padding-left: 36px;
+    padding-right: 36px;
+}
+
+.header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar, .profile-bar {
+    height: 40px;
+}
+
+.left, .right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.right {
+    gap: 20px;
+}
+
+.search-bar input {
+    border: 0;
+    height: 20px;
+    width: 300px;
+    border-radius: 8px;
+    background-color: rgb(232, 234, 244);
+}
+
+.search-bar img {
+    height: 20px;
+}
+
+.profile.icon {
+    height: 40px;
+    width: auto;
+}
+
+.text p, .text h3 {
+    margin: 0;
+}
+
+.header button {
+    padding: 8px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 16px;
+    border: 0;
+    background-color: rgb(63, 155, 220);
+    color: white;
+}
+
+.content {
+    background-color: rgb(232, 234, 244);
+    display: grid;
+    grid-template-rows: repeat(2, 48px 1fr);
+    grid-template-columns: 1fr 250px;
+    padding: 16px;
+}
+
+.content > p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.projects {
+    grid-row: 2 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+}
+
+.projects .card, .side.card {
+    height: 150px;
+    width: 300px;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects .card {
+    border: 0;
+    border-left: 6px;
+    border-style: solid;
+    border-color: rgb(165, 93, 42);
+    padding: 16px;
+    justify-content: space-between;
+}
+
+.buttons img {
+    height: 20px;
+    width: auto;
+}
+
+.card .buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    gap: 12px;
+}
+
+.side.card {
+    height: 300px;
+    width: 200px;
+    padding: 16px;
+}
+
+.side.card > div {
+    border: 0;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: rgb(232, 234, 244);
+}
+
+#announce {
+    padding-top: 12px;
+}
+
+#bottom {
+    border: 0;
+}
+
+.trending + .side.card {
+    justify-content: space-between;
+}
+
+.side.card > .text {
+    border: 0;
 }
